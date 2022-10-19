@@ -9,7 +9,17 @@
 <%= link_to "Import new transaction", new_cnab_transaction_path, class: "btn btn-primary" %>
 <br />
 <br />
-
+  <div class="card-tools">
+    <div class="input-group input-group-sm mb-3" style="width: 250px;">
+      <%= search_form_for @q do |f| %>
+        <div class="input-group-append">
+          <%= f.label 'Search:', class:"mr-2"%>
+          <%= f.search_field :store_name_cont, class: "form-control form-control-sm float-right", placeholder: "Supermarket XPTO" %>
+          <% f.submit class: "btn btn-default" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 <table class = "table table-bordered table-striped">
   <thead>
     <tr>
@@ -21,8 +31,8 @@
   </thead>
 
   <tbody>
-    <% if @cnab_transactions.present? %>
-      <% @cnab_transactions.each do |transaction| %>
+    <% if @transactions.present? %>
+      <% @transactions.each do |transaction| %>
         <tr>
           <td><%= transaction.store.name %></td>
           <td><%= number_to_currency transaction.value %></td>
@@ -33,3 +43,11 @@
     <% end %>
   </tbody>
 </table>
+
+<div class="row">
+  <div class="col-sm-12 col-md-7">
+    <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
+      <%= paginate @transactions %>
+    </div>
+  </div>
+</div>

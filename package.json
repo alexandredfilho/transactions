@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.0",
+    "sass": "^1.55.0"
+  },
+  "scripts": {
+    "build:css:fontawesome": "cp -r ./node_modules/@fortawesome/fontawesome-free/webfonts ./app/assets/builds && sass ./app/assets/stylesheets/fontawesome.scss ./app/assets/builds/fontawesome.css --no-source-map --load-path=node_modules --quiet"
+  },
+  "name": "transactions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/alexandredfilho/transactions.git",
+  "author": "Alexandre Domingos Filho <alexandre.dfilho@gmail.com>",
+  "license": "MIT"
+}

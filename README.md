@@ -8,8 +8,6 @@
   This is a challenge made available by the company ByCoders that aims to test my knowledge in Ruby on Rails :heart: and mainly the design and development of a small importer of CNAB files.
 </h4>
 
-</br>
-
 <h4 align="center">
   The example of the CNAB file can be found in the official repository:
 

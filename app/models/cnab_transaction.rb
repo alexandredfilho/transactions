@@ -17,6 +17,8 @@ class CnabTransaction < ApplicationRecord
 
   before_create :set_balance
 
+  paginates_per 5
+
   private
 
   def set_balance

@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+  <div class="register-box col-4">
+    <div class="card card-outline card-primary">
+      <div class="card-header text-center">
+        <div class="h1"><b>CNAB</b> Transactions v1</div>
+      </div>
+      <div class="card-body">
+        <p class="login-box-msg">Register a new membership</p>
+
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+          <div class="input-group mb-3">
+              <div class="input-group-text">
+                <span class="fas fa-envelope"></span>
+              </div>
+            <%= f.email_field :email, autofocus: true, class:"form-control", autocomplete: "email", placeholder:"Email" %>
+          </div>
+          <div class="input-group mb-3">
+              <div class="input-group-text">
+                <span class="fas fa-lock"></span>
+              </div>
+            <%= f.password_field :password, autocomplete: "new-password", class:"form-control", placeholder:"Password" %>
+          </div>
+          <div class="input-group mb-3">
+              <div class="input-group-text">
+                <span class="fas fa-lock"></span>
+              </div>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control", placeholder:"Password Confirm" %>
+          </div>
+          <div class="row">
+            <div class="col-4">
+            <%= f.submit "Register", class:"btn btn-primary btn-block" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -7,10 +7,18 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "fontawesome", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+    <% if user_signed_in? %>
+      <%= render 'shared/navbar' %>
+    <% end %>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <div class = "container" style = "padding-top:20px;">
       <%= yield %>
     </div>

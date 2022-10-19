@@ -1,0 +1,18 @@
+<%= form_with(model: cnab_transaction) do |form| %>
+  <div class="container">
+    <div class="col-8">
+      <div class="mb-3">
+        <%= form.file_field :file, class: "form-control", id: "inputFile" %>
+      </div>
+    </div>
+
+    <div class="col sm-8 mb-3">
+      <div class="actions">
+        <div class="d-grid gap-2 d-md-flex">
+          <%= form.submit "Import", class:"btn btn-success text-white me-md-2" %>
+          <%= link_to 'Go Back', cnab_transactions_path, class:"btn btn-outline-primary text-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

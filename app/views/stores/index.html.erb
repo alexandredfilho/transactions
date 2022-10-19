@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-12 blog-main">
+    <div class="blog-post">
+      <h2 class="blog-post-title">Stores</h2>
+      <%= link_to "Import New Transaction", new_cnab_transaction_path, class: "btn btn-primary" %>
+      <br/><br/>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Store Name</th>
+            <th>Store Admin</th>
+            <th>Balance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @stores.each do |store| %>
+            <tr>
+              <td><%= store.name %></td>
+              <td><%= store.store_admin %></td>
+              <td><%= number_to_currency store.balance %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

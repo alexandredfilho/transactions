@@ -1,0 +1,35 @@
+<% if !flash[:notice].blank? %>
+  <div class = "alert alert-info">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<br />
+
+<%= link_to "Import new transaction", new_cnab_transaction_path, class: "btn btn-primary" %>
+<br />
+<br />
+
+<table class = "table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Store Name</th>
+      <th>Value</th>
+      <th>Transaction Date</th>
+      <th>Transaction Hour</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% if @cnab_transactions.present? %>
+      <% @cnab_transactions.each do |transaction| %>
+        <tr>
+          <td><%= transaction.store.name %></td>
+          <td><%= number_to_currency transaction.value %></td>
+          <td><%= transaction.date_transaction %></td>
+          <td><%= transaction.hour_transaction %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

@@ -1,6 +1,9 @@
 class CnabTransactionsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
-    @transactions = CnabTransaction.all.order('created_at DESC')
+    @q = CnabTransaction.ransack(params[:q])
+    @transactions = @q.result.page(params[:page]).per(10)
   end
 
   def new

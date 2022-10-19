@@ -1,24 +1,66 @@
-# README
+<h1 align="center">
+  <strong>CNAB</strong> Transactions v1
+</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+</hr>
 
-Things you may want to cover:
+<h4 align="center">
+  This is a challenge made available by the company ByCoders that aims to test my knowledge in Ruby on Rails :heart: and mainly the design and development of a small importer of CNAB files.
+</h4>
 
-* Ruby version
+</br>
 
-* System dependencies
+<h4 align="center">
+  The example of the CNAB file can be found in the official repository:
 
-* Configuration
+  [ByCoders Repository](https://github.com/ByCodersTec/desafio-dev)
+</h4>
 
-* Database creation
+</br>
 
-* Database initialization
+<p align="center">
 
-* How to run the test suite
+# Description
+## :rocket: Technologies
+This project was developed for [Alexandre Domingos Filho](https://github.com/alexandredfilho) with the following technologies:
 
-* Services (job queues, cache servers, search engines, etc.)
+-  [Ruby@3.0.0](https://www.ruby-lang.org/en/)
+-  [Rails@7.0.4](https://rubyonrails.org/)
+-  [PostgreSQL@1.4.4](https://www.postgresql.org/)
+-  [Bootstrap@5.2.2](https://getbootstrap.com)
+-  [FontAwesome-Free@6.2.0](https://fontawesome.com)
 
-* Deployment instructions
+## Pre-requirements
 
-* ...
+Make Sure you have Git, Yarn and PostgreSql installed! If you do not, check the official documentation of it and make sure to install the latest stable version.
+
+Take a look at your operational system installation steps:
+-  [Git Installation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+-  [Yarn Install](https://yarnpkg.com/getting-started/install)
+-  [PostgreSQL Install](https://www.postgresql.org/download/)
+
+To start working with this project is very simple, you just need:
+
+<code> _Open your terminal or console tab and enter the commands below, respectively:_</code>
+
+Clone this repository on your local machine using the git command:
+
+> git clone
+
+Install all backend gems:
+
+> bundle install
+
+Install all frontend dependencies:
+
+> yarn install
+
+Now it's time to prepare your local database, so run the rails commands:
+
+> rails db:create db:migrate db:seed
+
+</hr>
+
+Congratulations, the app is ready to use! :tada:
+
+</hr>

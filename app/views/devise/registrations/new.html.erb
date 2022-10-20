@@ -5,7 +5,7 @@
         <div class="h1"><b>CNAB</b> Transactions v1</div>
       </div>
       <div class="card-body">
-        <p class="login-box-msg">Register a new membership</p>
+        <p class="login-box-msg"><%= I18n.t("views.sign_up.title")%></p>
 
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
@@ -13,23 +13,23 @@
               <div class="input-group-text">
                 <span class="fas fa-envelope"></span>
               </div>
-            <%= f.email_field :email, autofocus: true, class:"form-control", autocomplete: "email", placeholder:"Email" %>
+            <%= f.email_field :email, autofocus: true, class:"form-control", autocomplete: "email", placeholder: I18n.t("views.sign_up.fields.email") %>
           </div>
           <div class="input-group mb-3">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
               </div>
-            <%= f.password_field :password, autocomplete: "new-password", class:"form-control", placeholder:"Password" %>
+            <%= f.password_field :password, autocomplete: "new-password", class:"form-control", placeholder: I18n.t("views.sign_up.fields.password") %>
           </div>
           <div class="input-group mb-3">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
               </div>
-            <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control", placeholder:"Password Confirm" %>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control", placeholder: I18n.t("views.sign_up.fields.password_confirmation") %>
           </div>
           <div class="row">
             <div class="col-4">
-            <%= f.submit "Register", class:"btn btn-primary btn-block" %>
+            <%= f.submit I18n.t("views.sign_up.buttons.register"), class:"btn btn-primary btn-block" %>
             </div>
           </div>
         <% end %>

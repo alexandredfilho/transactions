@@ -2,10 +2,10 @@
   <div class="register-box col-4">
     <div class="card card-outline card-primary">
       <div class="card-header text-center">
-        <div class="h1"><b>CNAB</b> TRansactions v1</div>
+        <div class="h1"><b>CNAB</b> Transactions v1</div>
       </div>
       <div class="card-body">
-        <p class="login-box-msg">Forgot your password?</p>
+        <p class="login-box-msg"><%= I18n.t("views.recover_password.title")%></p>
 
         <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
@@ -13,16 +13,16 @@
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
             </div>
-            <%= f.email_field :email, autofocus: true, class:"form-control", autocomplete: "email", placeholder:"Email" %>
+            <%= f.email_field :email, autofocus: true, class:"form-control", autocomplete: "email", placeholder: I18n.t("views.recover_password.fields.email") %>
           </div>
           <div class="row">
             <div class="col-12 mb-3">
               <div class="icheck-primary">
-                <%= f.submit "Recover Password", class:"btn btn-success btn-block" %>
+                <%= f.submit I18n.t("views.recover_password.buttons.recover"), class:"btn btn-success btn-block" %>
               </div>
             </div>
             <div class="col-12">
-              <%= link_to "Login", new_user_session_path, class:"btn btn-outline-primary btn-block" %>
+              <%= link_to I18n.t("views.recover_password.buttons.back"), new_user_session_path, class:"btn btn-outline-primary btn-block" %>
             </div>
           </div>
         <% end %>

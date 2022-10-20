@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <h3 class="mb-3">Dashboard</h3>
+  <div class="row">
+    <div class="col-lg-3 col-6">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= I18n.t("views.dashboard.transactions.title") %></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%= @imported_transactions.length %></h6>
+          <p class="card-text"><%= I18n.t("views.dashboard.transactions.description") %></p>
+          <%= link_to cnab_transactions_path, class:"small-box-footer", "data-bs-toggle":"tooltip", "data-bs-placement":"top", "title":"See All Transactions" do %>
+              <%= I18n.t("views.dashboard.transactions.buttons.see_all")%> <i class="fas fa-arrow-circle-right"></i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-6">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= I18n.t("views.dashboard.stores.title") %></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%= @imported_stores.length %></h6>
+          <p class="card-text"><%= I18n.t("views.dashboard.stores.description") %></p>
+          <%= link_to stores_path, class:"small-box-footer", "data-bs-toggle":"tooltip", "data-bs-placement":"top", "title":"See All Transactions" do %>
+              <%= I18n.t("views.dashboard.stores.buttons.see_all")%> <i class="fas fa-arrow-circle-right"></i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

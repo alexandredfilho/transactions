@@ -1,32 +1,36 @@
 <% if !flash[:notice].blank? %>
-  <div class = "alert alert-info">
+  <div class="alert alert-info">
     <%= flash[:notice] %>
   </div>
 <% end %>
 
 <br />
+<div class="blog-post">
+  <h2 class="blog-post-title"><%= I18n.t("views.transactions.title") %></h2>
+</div>
+<br/>
 
-<%= link_to "Import new transaction", new_cnab_transaction_path, class: "btn btn-primary" %>
-<br />
-<br />
-  <div class="card-tools">
-    <div class="input-group input-group-sm mb-3" style="width: 250px;">
-      <%= search_form_for @q do |f| %>
-        <div class="input-group-append">
-          <%= f.label 'Search:', class:"mr-2"%>
-          <%= f.search_field :store_name_cont, class: "form-control form-control-sm float-right", placeholder: "Supermarket XPTO" %>
-          <% f.submit class: "btn btn-default" %>
-        </div>
-      <% end %>
-    </div>
+<%= link_to I18n.t("views.transactions.buttons.import_new_transaction"), new_cnab_transaction_path, class: "btn btn-primary" %>
+<br /><br />
+
+<div class="card-tools">
+  <div class="input-group input-group-sm mb-3" style="width: 250px;">
+    <%= search_form_for @q do |f| %>
+      <div class="input-group-append">
+        <%= f.label I18n.t("views.transactions.search.label"), class:"mr-2"%>
+        <%= f.search_field :store_name_cont, class: "form-control form-control-sm float-right", placeholder: I18n.t("views.transactions.search.placeholder") %>
+        <% f.submit class: "btn btn-default" %>
+      </div>
+    <% end %>
   </div>
+</div>
 <table class = "table table-bordered table-striped">
   <thead>
     <tr>
-      <th>Store Name</th>
-      <th>Value</th>
-      <th>Transaction Date</th>
-      <th>Transaction Hour</th>
+      <th><%= I18n.t("views.transactions.table.store_name")%></th>
+      <th><%= I18n.t("views.transactions.table.value")%></th>
+      <th><%= I18n.t("views.transactions.table.transaction_date")%></th>
+      <th><%= I18n.t("views.transactions.table.transaction_hour")%></th>
     </tr>
   </thead>
 
@@ -36,8 +40,8 @@
         <tr>
           <td><%= transaction.store.name %></td>
           <td><%= number_to_currency transaction.value %></td>
-          <td><%= transaction.date_transaction %></td>
-          <td><%= transaction.hour_transaction %></td>
+          <td><%= l(transaction.date_transaction) %></td>
+          <td><%= transaction.hour_transaction.strftime("%H:%M") %></td>
         </tr>
       <% end %>
     <% end %>

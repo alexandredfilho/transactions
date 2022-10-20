@@ -9,8 +9,8 @@
     <div class="col sm-8 mb-3">
       <div class="actions">
         <div class="d-grid gap-2 d-md-flex">
-          <%= form.submit "Import", class:"btn btn-success text-white me-md-2" %>
-          <%= link_to 'Go Back', cnab_transactions_path, class:"btn btn-outline-primary text-primary" %>
+          <%= form.submit I18n.t("views.transactions.buttons.import"), class:"btn btn-success text-white me-md-2" %>
+          <%= link_to I18n.t("views.transactions.buttons.back"), cnab_transactions_path, class:"btn btn-outline-primary text-primary" %>
         </div>
       </div>
     </div>

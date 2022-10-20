@@ -1,26 +1,32 @@
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">CNABT</a>
-      <%= link_to "Home", home_index_path, class:"navbar-toggler", type:"button", "data-bs-toggle": "collapse", "data-bs-target": "#navbarNav" %>
+      <%= link_to I18n.t("views.home.navbar.buttons.home"), home_index_path, class:"navbar-toggler", type:"button", "data-bs-toggle": "collapse", "data-bs-target": "#navbarNav" %>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-        <%= link_to "Home", home_index_path, class: "nav-link active"%>
+        <%= link_to I18n.t("views.home.navbar.buttons.home"), home_index_path, class: "nav-link active"%>
         </li>
         <li class="nav-item">
-          <%= link_to "Transactions", cnab_transactions_path, class: "nav-link"%>
+          <%= link_to I18n.t("views.home.navbar.buttons.transactions"), cnab_transactions_path, class: "nav-link"%>
         </li>
         <li class="nav-item">
-          <%= link_to "Stores", stores_path, class: "nav-link"%>
+          <%= link_to I18n.t("views.home.navbar.buttons.stores"), stores_path, class: "nav-link"%>
         </li>
       </ul>
     </div>
       <ul class="nav justify-content-end">
         <li class="nav-item">
+          <%= link_to 'English', root_path(locale: :en), class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Português', root_path(locale: "pt-BR"), class: "nav-link" %>
+        </li>
+        <li class="nav-item">
           <%= link_to current_user.email, edit_user_registration_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Logout", destroy_user_session_path, class: "nav-link" %>
+          <%= link_to I18n.t("views.home.navbar.buttons.logout"), destroy_user_session_path, class: "nav-link" %>
         </li>
       </ul>
   </div>

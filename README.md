@@ -25,8 +25,14 @@ This project was developed for [Alexandre Domingos Filho](https://github.com/ale
 -  [Ruby@3.0.0](https://www.ruby-lang.org/en/)
 -  [Rails@7.0.4](https://rubyonrails.org/)
 -  [PostgreSQL@1.4.4](https://www.postgresql.org/)
+-  [Devise@4.8.1](https://github.com/heartcombo/devise)
 -  [Bootstrap@5.2.2](https://getbootstrap.com)
 -  [FontAwesome-Free@6.2.0](https://fontawesome.com)
+-  [Rails-i18n@7.0.5](https://github.com/svenfuchs/rails-i18n)
+-  [Kaminari@1.2.2](https://github.com/kaminari/kaminari)
+-  [Ransack@6.2.1](https://github.com/activerecord-hackery/ransack)
+-  [Rspec-rails@4.0.2](https://github.com/rspec/rspec-rails)
+-  [Awesome_print@1.9.2](https://github.com/awesome-print/awesome_print) - For debugging in development
 
 ## Pre-requirements
 

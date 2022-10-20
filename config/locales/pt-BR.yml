@@ -1,0 +1,86 @@
+pt-BR:
+  activerecord:
+    models:
+      cnab_transaction:
+        one: "Transação"
+        other: "Transações"
+  views:
+    sign_up:
+      title: "Crie sua conta conosco!"
+      fields:
+        email: "E-mail"
+        password: "Senha"
+        password_confirmation: "Confirmação da Senha"
+      buttons:
+        register: "Criar Conta"
+    login:
+      fields:
+        email: "E-mail"
+        password: "Senha"
+      buttons:
+        sign_in: "Entrar"
+        sign_up: "Cadastrar"
+        forgot_your_password: "Esqueceu sua senha?"
+    edit:
+      user:
+        title: "Editar"
+        currently_waiting_confirmation_for: "Atualmente aguardando confirmação para:"
+        new_password: "Nova senha"
+        confirm_new_password: "Confirme sua nova senha"
+        current_password: "Senha atual"
+        type_your_current_password: "Insira sua senha atual:"
+        buttons:
+          update: "Atualizar"
+          back: "Voltar"
+    recover_password:
+      title: "Esqueceu sua senha?"
+      fields:
+        email: "E-mail"
+      buttons:
+        recover: "Recuperar Senha"
+        back: "Voltar"
+    home:
+      navbar:
+        buttons:
+          home: "Início"
+          transactions: "Transações"
+          stores: "Lojas"
+          logout: "Sair"
+    transactions:
+      title: "Transações"
+      buttons:
+        import_new_transaction: "Importar nova transação"
+        import: "Importar"
+        back: "Voltar"
+      new:
+        title: "Adicionar novo arquivo de transação"
+      table:
+        store_name: "Nome da Loja"
+        value: "Valores"
+        transaction_date: "Data da transação"
+        transaction_hour: "Hora da transação"
+      search:
+        label: "Filtrar por Loja:"
+        placeholder: "Empresa ABC"
+      pagination:
+        first: "Primeira"
+        last: "Última"
+        next: "Próxima"
+        previous: "Anterior"
+    stores:
+      title: "Lojas"
+      table:
+        store_name: "Noma da loja"
+        store_admin: "Administrador da Loja"
+        balance: "Balanço"
+    dashboard:
+      stores:
+        title: "Lojas Importadas"
+        description: "Nesta seção podemos ver o número de lojas que foram importadas para o sistema"
+        buttons:
+          see_all: "Ver todas as lojas"
+      transactions:
+        title: "Transações Importadas"
+        description: "Nesta seção podemos ver o número de transações que foram importadas para o sistema"
+        buttons:
+          see_all: "Ver todas as transações"

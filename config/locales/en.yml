@@ -1,33 +1,86 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  activerecord:
+    models:
+      cnab_transaction:
+        one: "Transaction"
+        other: "Transactions"
+  views:
+    sign_up:
+      title: "Create your account with us!"
+      fields:
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+      buttons:
+        register: "Create Account"
+    login:
+      fields:
+        email: "Email"
+        password: "Password"
+      buttons:
+        sign_in: "Sign In"
+        sign_up: "Sign Up"
+        forgot_your_password: "Forgot your password?"
+    edit:
+      user:
+        title: "Editar"
+        currently_waiting_confirmation_for: "Currently waiting confirmation for:"
+        new_password: "New Password"
+        confirm_new_password: "Confirm your new passowrd"
+        current_password: "Current Password"
+        type_your_current_password: "Type your current password:"
+        buttons:
+          update: "Update"
+          back: "Back"
+    recover_password:
+      title: "Forgot your password?"
+      fields:
+        email: "Email"
+      buttons:
+        recover: "Recover Password"
+        back: "Back"
+    home:
+      navbar:
+        buttons:
+          home: "Home"
+          transactions: "Transacions"
+          stores: "Stores"
+          logout: "Logout"
+    transactions:
+      title: "Transacions"
+      buttons:
+        import_new_transaction: "Import New Transaction"
+        import: "Import"
+        back: "Back"
+      new:
+        title: "Add new transaction file"
+      table:
+        store_name: "Store Name"
+        value: "Values"
+        transaction_date: "Transactions Date"
+        transaction_hour: "Transactions Hour"
+      search:
+        label: "Filter by store:"
+        placeholder: "Company ABC"
+      pagination:
+        first: "First"
+        last: "Last"
+        next: "Next"
+        previous: "Previous"
+    stores:
+      title: "Stores"
+      table:
+        store_name: "Store Name"
+        store_admin: "Store Admin"
+        balance: "Balance"
+    dashboard:
+      stores:
+        title: "Imported Stores"
+        description: "In this section we can see the number of stores that were imported into the system"
+        buttons:
+          see_all: "See all Stores"
+      transactions:
+        title: "Imported Transactions"
+        description: "In this section we can see the number of transactions that were imported into the system"
+        buttons:
+          see_all: "See all Transactions"

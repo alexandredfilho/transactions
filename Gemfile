@@ -11,8 +11,9 @@ gem "jbuilder"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem "rails", "~> 7.0.4"
-gem 'ransack'
-gem 'kaminari'
+gem "rails-i18n"
+gem "ransack"
+gem "kaminari"
 gem "sprockets-rails"
 gem "stimulus-rails"
 gem "turbo-rails"

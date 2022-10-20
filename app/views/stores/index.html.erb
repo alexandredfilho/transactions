@@ -1,15 +1,15 @@
 <div class="row">
   <div class="col-md-12 blog-main">
     <div class="blog-post">
-      <h2 class="blog-post-title">Stores</h2>
-      <%= link_to "Import New Transaction", new_cnab_transaction_path, class: "btn btn-primary" %>
+      <h2 class="blog-post-title"><%= I18n.t("views.stores.title") %></h2>
+      <%= link_to I18n.t("views.transactions.buttons.import_new_transaction"), new_cnab_transaction_path, class: "btn btn-primary" %>
       <br/><br/>
       <table class="table">
         <thead class="thead-dark">
           <tr>
-            <th>Store Name</th>
-            <th>Store Admin</th>
-            <th>Balance</th>
+            <th><%= I18n.t("views.stores.table.store_name") %></th>
+            <th><%= I18n.t("views.stores.table.store_admin") %></th>
+            <th><%= I18n.t("views.stores.table.balance") %></th>
           </tr>
         </thead>
         <tbody>
